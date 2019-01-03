@@ -1,0 +1,28 @@
+@import '../index.scss';
+
+.weather-form {
+  display: flex;
+  justify-content: space-between;
+  height: 1.7em;
+
+  &__input {
+    flex: 1 1 60%;
+    width: 100px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    
+    &::placeholder {
+      color: #000;
+      font-family: $ff-primary;
+    }
+  }
+  
+  &__button {
+    flex: 1 1 40%;
+    margin-left: 1em;
+    background: #000;
+    border: none;
+    color: #fff;
+  }
+}

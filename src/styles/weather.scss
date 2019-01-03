@@ -1,0 +1,113 @@
+@import '../index.scss';
+
+@mixin clr($clr) {
+  font-weight: $fw-extra-bold;
+  position: relative;
+  color: $clr;
+  
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2em;
+    height: .15em;
+    background: $clr;
+    bottom: -.2em;
+  }
+}
+
+.weather-info {
+  width: 100%;
+}
+
+.main-title {
+  margin-top: .4em;
+  font-size: calc(2.6em + 4vw);
+  font-weight: $fw-extra-bold;
+  line-height: 1em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 4.5em;
+  }
+}
+
+.day-card-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 1px 1px 9px 0px rgba(231,231,231,1);
+  background: transparent;
+  padding: .4em;
+  border-radius: 8px;
+}
+
+.main-card {
+  margin-top: 4.5em;
+  margin-bottom: 1.2em;
+
+  &__location {
+    font-weight: $fw-bold;
+    font-size: 1.2em;
+  }
+
+  &__stat {
+    font-size: .95em;
+  }
+
+  .error {
+    margin-top: .6em;
+  }
+}
+
+.day-card {
+  list-style: none;
+  flex: 1 1 22%;
+  padding: .2em;
+  &:not(:last-child) {
+    margin-right: .3em;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: calc(.45em + 1vw);
+
+    @media screen and (min-width: 768px) {
+      font-size: .9em;
+    }
+  }
+
+  &__subtitle {
+    font-size: .6em;
+    line-height: 1.4em;
+  }
+
+  .icon {
+    width: 85%;
+    height: auto;
+    margin: .4em 0;
+  }
+}
+
+.sunny {
+  @include clr($clr-sunny);
+}
+
+.cloudy {
+  @include clr($clr-cloudy);
+}
+
+.raining {
+  @include clr($clr-raining);
+}
+
+.storm {
+  @include clr($clr-storm);
+}
+
+.snowing {
+  @include clr($clr-snowing);
+}

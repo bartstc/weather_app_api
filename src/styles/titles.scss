@@ -1,0 +1,26 @@
+@import '../index.scss';
+
+.titles {
+  display: none;
+  flex-basis: 400px;
+  background: url('../img/bg.jpg') center center no-repeat;
+  background-size: cover;
+  padding-left: 1em;
+
+  &__title {
+    margin-top: 1.5em;
+    font-size: 2.8em;
+    font-weight: $fw-extra-bold;
+    line-height: 1em;
+  }
+
+  &__subtitle {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .titles {
+    display: block;
+  }
+}

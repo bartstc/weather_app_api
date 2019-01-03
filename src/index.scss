@@ -1,0 +1,21 @@
+// colors
+$clr-raining: #364FCB;
+$clr-cloudy: #555B7E;
+$clr-storm: #FF1C2B;
+$clr-snowing: #61C0FF;
+$clr-sunny: #FFBB00;
+
+$ff-primary: 'Poppins', sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $ff-primary;
+  font-weight: $fw-regular;
+}
